@@ -1,0 +1,8 @@
+.input {
+  padding: 1.5rem;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
