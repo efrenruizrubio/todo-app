@@ -14,6 +14,7 @@ export const TodoList = ({ todos }) => {
 								title={todo.title}
 								priority={todo.priority}
 								completed={todo.completed}
+								todos={todos}
 							/>
 						);
 				  })

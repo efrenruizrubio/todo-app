@@ -2,7 +2,10 @@ import React from "react";
 import styles from "./TodoItem.module.scss";
 import logo from "../../assets/icons/trash-can.svg";
 
-export const TodoItem = ({ id, title, priority, completed }) => {
+export const TodoItem = ({ id, title, priority, completed, removeTodo }) => {
+	const deleteTodo = (id) => {
+		removeTodo;
+	};
 	return (
 		<article className={styles.card}>
 			<div className={styles.card_left}>
@@ -18,7 +21,13 @@ export const TodoItem = ({ id, title, priority, completed }) => {
 				</h2>
 			</div>
 			<div className={styles.card_right}>
-				<img width="30" height="30" src={logo} alt="Trash icon" />
+				<img
+					width="30"
+					height="30"
+					src={logo}
+					alt="Trash icon"
+					onClick={() => deleteTodo(id)}
+				/>
 			</div>
 		</article>
 	);

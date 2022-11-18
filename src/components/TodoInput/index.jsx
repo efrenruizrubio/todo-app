@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import styles from "./TodoInput.module.scss";
 
-export const TodoInput = ({ addTodo, todos }) => {
+export const TodoInput = ({ addTodo }) => {
 	const [title, setTitle] = useState("");
 	const [priority, setPriority] = useState("Baja");
 
