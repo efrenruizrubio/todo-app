@@ -1,15 +1,25 @@
 import React from "react";
 import styles from "./TodoItem.module.scss";
+import logo from "../../assets/icons/trash-can.svg";
 
 export const TodoItem = ({ id, title, priority, completed }) => {
 	return (
 		<article className={styles.card}>
-			<h2 className={styles.card_element}>{title}</h2>
-			<h2 className={styles.card_element}>{id}</h2>
-			<h4 className={styles.card_element}>{priority}</h4>
-			<h4 className={`${styles.card_element} ${styles.card_element_checkmark}`}>
-				{completed ? "true" : "false"}
-			</h4>
+			<div className={styles.card_left}>
+				<h2 className={styles.card_element_id}>{id}</h2>
+			</div>
+			<div className={styles.card_center}>
+				<h2 className={styles.card_element}>{title}</h2>
+				<h2 className={styles.card_element}>{priority}</h2>
+				<h2
+					className={`${styles.card_element} ${styles.card_element_checkmark}`}
+				>
+					{completed ? "true" : "false"}
+				</h2>
+			</div>
+			<div className={styles.card_right}>
+				<img width="30" height="30" src={logo} alt="Trash icon" />
+			</div>
 		</article>
 	);
 };

@@ -1,12 +1,25 @@
 .card {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 3.5fr 1fr;
+	grid-template-areas: "left center right";
+	place-items: center;
 	width: 100%;
-	flex-direction: column;
 	background-color: white;
+	height: 175px;
+	&_left {
+		grid-area: left;
+	}
+	&_center {
+		grid-area: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+	&_right {
+		grid-area: right;
+	}
 	&_element {
-		background-color: red;
 		&_checkmark {
-			background-color: blue;
 		}
 	}
 }
