@@ -35,17 +35,11 @@ export const App = () => {
 		});
 	};
 
-	const removeTodo = (id) => {
-		// const todoToRemove = todos[id - 1];
-		// console.log(todoToRemove);
-		console.log(id);
-	};
-
 	return (
-		<TodosContext.Provider value={{ todos, addTodo, removeTodo }}>
-			<TodoInput addTodo={addTodo} todos={todos} />
+		<TodosContext.Provider value={{ todos, addTodo }}>
+			<TodoInput addTodo={addTodo} />
 			<TodoFilter />
-			<TodoList todos={todos} removeTodo={removeTodo} />
+			<TodoList todos={todos} />
 			<Pagination />
 		</TodosContext.Provider>
 	);

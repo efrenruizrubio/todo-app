@@ -1,5 +1,12 @@
+@use "../../styles/variables.scss";
+
 .list {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
+
+	&_empty {
+		margin: 1rem 0;
+		color: variables.$secondary-green-color;
+	}
 }
